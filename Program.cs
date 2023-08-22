@@ -32,7 +32,7 @@ app.MapControllerRoute(
 app.Run();
 
 
-
+//service Databasec context  in core 6. startup class in core 5
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDBContext>
     {
         public ApplicationDBContext CreateDbContext(string[] args)
