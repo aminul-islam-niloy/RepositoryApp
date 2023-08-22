@@ -5,10 +5,14 @@ using RepositoryApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<ApplicationDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationDbContext") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContext' not found.")));
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -32,22 +36,5 @@ app.MapControllerRoute(
 app.Run();
 
 
-//service Databasec context  in core 6. startup class in core 5
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDBContext>
-    {
-        public ApplicationDBContext CreateDbContext(string[] args)
-        {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
 
-            var builder = new DbContextOptionsBuilder<ApplicationDBContext>();
-            var connectionString = configuration.GetConnectionString("ApplicationDbContext");
-
-            builder.UseSqlServer(connectionString);
-
-            return new ApplicationDBContext(builder.Options);
-        }
-    }
 
