@@ -14,6 +14,11 @@ namespace RepositoryApp.Manager
         {
             // 
         }
+
+        public Product GetById(int id)
+        {
+           return GetFirstOrDefault(x => x.Id == id);   
+        }
     }
 }
 

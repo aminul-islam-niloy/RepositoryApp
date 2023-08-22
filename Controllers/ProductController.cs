@@ -45,6 +45,59 @@ namespace RepositoryApp.Controllers
            
             ViewBag.Messege = messe;
             return View();
+        } 
+
+        public ActionResult Edit(int id)
+        {
+            var product= _productManager.GetById(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
         }
+
+        [HttpPost]
+        public ActionResult Edit(Product product)
+        {
+            string messe = "";
+            bool isUpdate = _productManager.Update(product);
+            if (isUpdate)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                messe = "Product not update";
+            }
+
+            ViewBag.Messege = messe;
+
+
+            return View(product);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var product = _productManager.GetById( id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
+        public ActionResult Delete(int id) {
+
+            var product = _productManager.GetById(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        
+        }
+
+
     }
 }
