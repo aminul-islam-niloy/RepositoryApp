@@ -3,6 +3,7 @@ using RepositoryApp.Models;
 
 namespace RepositoryApp.Data
 {
+    
     public class ApplicationDBContext:DbContext
     {
         // managing and interacting with a database  using an

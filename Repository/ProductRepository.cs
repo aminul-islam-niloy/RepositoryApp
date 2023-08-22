@@ -9,7 +9,7 @@ namespace RepositoryApp.Repository
     {
         public ProductRepository(DbContext dbContext) : base(dbContext)
         {
-
-        }
+             
+        } 
     }
 }

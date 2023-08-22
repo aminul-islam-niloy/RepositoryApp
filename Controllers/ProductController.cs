@@ -8,13 +8,12 @@ namespace RepositoryApp.Controllers
 {
     public class ProductController : Controller
     {
-        ApplicationDBContext _dbContext;
-        IProductManager _productManager;
+        private IProductManager _productManager;
         //create constructor 
-        public ProductController(ApplicationDBContext dbContext)
+        public ProductController(ProductManager productManager  )
         {
-            _dbContext = dbContext;
-            _productManager=new ProductManager(dbContext);
+
+            _productManager = productManager;
         }
 
         public IActionResult Index()
