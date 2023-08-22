@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryApp", "RepositoryApp.csproj", "{C31C6885-28B2-4524-BD8B-35CB74C0BDB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C31C6885-28B2-4524-BD8B-35CB74C0BDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31C6885-28B2-4524-BD8B-35CB74C0BDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31C6885-28B2-4524-BD8B-35CB74C0BDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31C6885-28B2-4524-BD8B-35CB74C0BDB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7669244B-1D7E-439D-8E61-003AD7F311A8}
+	EndGlobalSection
+EndGlobal
