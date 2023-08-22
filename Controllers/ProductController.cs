@@ -98,6 +98,19 @@ namespace RepositoryApp.Controllers
         
         }
 
+        [HttpPost]
+        public ActionResult Delete(Product product)
+        { 
+
+            bool isDeleted=_productManager.Delete(product);
+            if (isDeleted)
+            {
+                return RedirectToAction("Index");
+            }
+
+        return View();
+        
+        }
 
     }
 }
